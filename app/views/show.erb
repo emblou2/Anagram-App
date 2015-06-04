@@ -1,7 +1,7 @@
-<div class="row">
-  <h1>Anagrams for <%= "#{@word}" %></h1>
+<div class="jumbotron">
+  <h1><%= "#{@word}" %></h1>
 </div>
-<div class="row">
+<div class="well">
   <ul>
     <% @anagrams.each do |anagram| %>
       <li><%= "#{anagram}" %></li>

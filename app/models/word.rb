@@ -1,6 +1,6 @@
 class Word
 
-  def self.find_anagram(letters)
+  def self.find_anagrams(letters)
   length = letters.length
 
   letters = letters.split("")
