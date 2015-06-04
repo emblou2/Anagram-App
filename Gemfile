@@ -13,5 +13,7 @@ gem 'rake'
 gem 'rack'
 gem 'rack-test'
 
-
+group :production do
+  gem 'puma'
+end
 
