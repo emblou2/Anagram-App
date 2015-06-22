@@ -1,5 +1,3 @@
-
-
 class Word < ActiveRecord::Base
 
 
@@ -12,13 +10,12 @@ class Word < ActiveRecord::Base
 
   anagrams = []
 
-  letters.each_with_index do |letter, index|
+  letters.each do |letter|
     remaining_letters = letters.select {|l| l != letter}
     anagrams << letter + remaining_letters.join
 
     anagrams << letter + reverse_letters(remaining_letters).join
   end
-
 anagrams
 end
 
