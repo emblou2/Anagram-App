@@ -6,7 +6,7 @@ class Word < ActiveRecord::Base
   def self.find_anagrams(letters)
   length = letters.length
 
-  letters = letters.split("")
+  letters = letters.split(//)
 
   anagrams = []
 
@@ -16,7 +16,7 @@ class Word < ActiveRecord::Base
 
     anagrams << letter + reverse_letters(remaining_letters).join
   end
-anagrams
+  anagrams
 end
 
 def self.reverse_letters(letters)
