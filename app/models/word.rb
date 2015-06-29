@@ -14,7 +14,7 @@ class Word < ActiveRecord::Base
     remaining_letters = letters.select {|l| l != letter}
     anagrams << letter + remaining_letters.join
  
-    anagrams << letter + reverse_letters(remaining_letters).join
+    anagrams.rotate! 
    
   end
     Word.where("text in (?)", anagrams)
