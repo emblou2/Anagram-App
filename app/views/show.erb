@@ -1,10 +1,10 @@
 <div class="jumbotron">
   <h1><%= "#{@word}" %></h1>
 </div>
-<div class="well">
-  <ul>
-    <% @anagrams.each do |anagram| %>
-      <li><%= anagram.text %></li>
+<ul class="well">
+    <% if !@anagrams.nil? %>
+      <% @anagrams.each do |word| %>
+        <li><%= word.text %></li>
+      <% end %>
     <% end %>
-  </ul>
-</div>
+</ul>
