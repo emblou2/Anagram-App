@@ -20,6 +20,7 @@ class Word < ActiveRecord::Base
     Word.where("text in (?)", anagrams)
 end
 
+
 def self.reverse_letters(letters)
   length = letters.length
   reversed_letters = Array.new(length)
