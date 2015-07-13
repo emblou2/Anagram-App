@@ -1,0 +1,19 @@
+<h1>Words</h1>
+<div class="row">
+  <div class="col-md-offset-3 col-md-6">
+    <table class="table table-striped">
+      <thead>
+        <th class="text-center">Text</th>
+        <th class="text-center">Letters</th>
+      </thead>
+      <tbody class="table-body">
+        <% @words.each do |word| %>
+          <tr>
+            <td><%= word.text %></td>
+            <td><%= word.letters %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
