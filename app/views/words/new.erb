@@ -1,26 +1,3 @@
 <h1>Add your own word</h1>
 
-<form action="/words" method="post" class="form form-horizontal">
-  <% if @error %>
-    <div class="row alert alert-danger" role="alert">
-      <p class='error'><%= "#{@error}" %></p>
-    </div>
-  <% end %>
-
-
-  <div class="form-group">
-    <div class="row">
-      <label for="word" class="top-margin-45">Enter your word here</label>
-    </div>
-
-    <div class="row">
-      <input type="text" name="text" class="form-control"
-          id="word-input" />
-    </div>
-
-    <div class="row">
-      <input type="submit" class="btn btn-primary btn-block top-margin-45" id="word-submit"
-          value="Add my word!" />
-    </div>
-  </div>
-</form>
+<%= erb :"/words/_form" %>

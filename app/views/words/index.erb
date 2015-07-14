@@ -5,12 +5,14 @@
       <thead>
         <th class="text-center">Text</th>
         <th class="text-center">Letters</th>
+        <th class="text-center">Actions</th>
       </thead>
       <tbody class="table-body">
         <% @words.each do |word| %>
           <tr>
             <td><a href="<%= "/words/#{word.id}" %>"><%= word.text %></a></td>
             <td><%= word.letters %></td>
+            <td><a href="<%= "/words/#{word.id}/edit" %>">Edit</a></td>
           </tr>
         <% end %>
       </tbody>
